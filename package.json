@@ -2,7 +2,7 @@
   "name": "v8-bytecode-highlight",
   "displayName": "v8-bytecode-highlight",
   "description": "Syntax highlighting for v8 ignition bytecode disassembly.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.92.0"
   },

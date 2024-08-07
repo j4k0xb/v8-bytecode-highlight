@@ -2,4 +2,6 @@
 
 Syntax highlighting for V8 ignition bytecode disassembly.
 
+Applies to `.ign` files.
+
 ![screenshot](./images/screenshot.png)
