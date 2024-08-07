@@ -56,6 +56,16 @@
 			}
 		},
 		{
+			"name": "meta.embedded.block.javascript",
+			"begin": "(?<=^ - source code: )",
+			"end": "(?=^ - script: 0x[a-f\\d]+ <Script>$)",
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
+		},
+		{
 			"name": "meta.property.ignition",
 			"match": "^ - ([\\w ()]+)",
 			"captures": {

@@ -1,0 +1,103 @@
+0x3fd385b79391: [SharedFunctionInfo] in OldSpace
+ - map: 0x22c86bcc0909 <Map[56](SHARED_FUNCTION_INFO_TYPE)>
+ - name: 0x22c86bcc0701 <String[0]: #>
+ - inferred name: 0x22c86bcc0701 <String[0]: #>
+ - kind: NormalFunction
+ - syntax kind: Wrapped
+ - function_map_index: 209
+ - formal_parameter_count: 4
+ - expected_nof_properties: 2
+ - language_mode: strict
+ - data: 0x3fd385b793c9 <BytecodeArray[120]>
+ - code (from data): 0x366fde011ce1 <Code BUILTIN InterpreterEntryTrampoline>
+ - source code: 'use strict';
+
+const { RegExpPrototypeExec } = primordials;
+
+const {
+  prepareMainThreadExecution,
+  markBootstrapComplete,
+} = require('internal/process/pre_execution');
+const { getOptionValue } = require('internal/options');
+
+const mainEntry = prepareMainThreadExecution(true);
+
+markBootstrapComplete();
+
+// Necessary to reset RegExp statics before user code runs.
+RegExpPrototypeExec(/^/, '');
+
+if (getOptionValue('--experimental-default-type') === 'module') {
+  require('internal/modules/run_main').executeUserEntryPoint(mainEntry);
+} else {
+  /**
+   * To support legacy monkey-patching of `Module.runMain`, we call `runMain` here to have the CommonJS loader begin
+   * the execution of the main entry point, even if the ESM loader immediately takes over because the main entry is an
+   * ES module or one of the other opt-in conditions (such as the use of `--import`) are met. Users can monkey-patch
+   * before the main entry point is loaded by doing so via scripts loaded through `--require`. This monkey-patchability
+   * is undesirable and is removed in `--experimental-default-type=module` mode.
+   */
+  require('internal/modules/cjs/loader').Module.runMain(mainEntry);
+}
+
+ - script: 0x3fd385b79799 <Script>
+ - function token position: 0
+ - start position: 0
+ - end position: 1182
+ - no debug info
+ - scope info: 0x3fd385b79729 <ScopeInfo FUNCTION_SCOPE>
+ - length: 4
+ - feedback_metadata: 0x3fd385b79771: [FeedbackMetadata] in OldSpace
+ - map: 0x22c86bcc0eb1 <Map(FEEDBACK_METADATA_TYPE)>
+ - slot_count: 36
+ - create_closure_slot_count: 0
+ Slot #0 LoadProperty
+ Slot #2 Call
+ Slot #4 LoadProperty
+ Slot #6 LoadProperty
+ Slot #8 Call
+ Slot #10 LoadProperty
+ Slot #12 Call
+ Slot #14 Call
+ Slot #16 Literal
+ Slot #17 Call
+ Slot #19 Call
+ Slot #21 CompareOp
+ Slot #22 Call
+ Slot #24 LoadProperty
+ Slot #26 Call
+ Slot #28 Call
+ Slot #30 LoadProperty
+ Slot #32 LoadProperty
+ Slot #34 Call
+
+0x2e034a255759: [SharedFunctionInfo] in OldSpace
+ - map: 0x22c86bcc0909 <Map[56](SHARED_FUNCTION_INFO_TYPE)>
+ - name: 0x22c86bcc0701 <String[0]: #>
+ - inferred name: 0x22c86bcc0701 <String[0]: #>
+ - kind: NormalFunction
+ - syntax kind: Wrapped
+ - function_map_index: 209
+ - formal_parameter_count: 6
+ - expected_nof_properties: 2
+ - language_mode: strict
+ - data: 0x2e034a255791 <BytecodeArray[18]>
+ - code (from data): 0x366fde011ce1 <Code BUILTIN InterpreterEntryTrampoline>
+ - source code: 'use strict';
+
+module.exports = require('assert').strict;
+
+ - script: 0x2e034a255899 <Script>
+ - function token position: 0
+ - start position: 0
+ - end position: 58
+ - no debug info
+ - scope info: 0x2e034a255839 <ScopeInfo FUNCTION_SCOPE>
+ - length: 6
+ - feedback_metadata: 0x2e034a255881: [FeedbackMetadata] in OldSpace
+ - map: 0x22c86bcc0eb1 <Map(FEEDBACK_METADATA_TYPE)>
+ - slot_count: 6
+ - create_closure_slot_count: 0
+ Slot #0 Call
+ Slot #2 LoadProperty
+ Slot #4 SetNamedStrict

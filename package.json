@@ -37,6 +37,10 @@
       {
         "language": "ignition",
         "scopeName": "source.ignition",
+        "embeddedLanguages": {
+          "source.js": "javascript",
+          "meta.embedded.block.javascript": "javascript"
+        },
         "path": "./syntaxes/ignition.tmLanguage.json"
       }
     ]
