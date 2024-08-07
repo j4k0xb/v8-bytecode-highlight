@@ -1,0 +1,25 @@
+{
+  "name": "v8-bytecode-highlight",
+  "displayName": "v8-bytecode-highlight",
+  "description": "Syntax highlighting for v8 ignition bytecode disassembly.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ignition",
+      "aliases": ["Ignition Bytecode", "ignition"],
+      "extensions": [".ign"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ignition",
+      "scopeName": "source.ignition",
+      "path": "./syntaxes/ignition.tmLanguage.json"
+    }]
+  }
+}

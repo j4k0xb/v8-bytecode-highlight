@@ -1,0 +1,114 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ignition Bytecode",
+	"patterns": [
+		{
+			"name": "meta.bytecode.ignition",
+			"comment": "Bytecode instructions",
+			"match": "^\\s*(\\d+)? ([SE]>)? (0x[0-9a-fA-F]+) @ \\s* (\\d+) : ([a-fA-F0-9]{2}(?: [a-fA-F0-9]{2})*)\\s*(\\w+)(.*)",
+			"captures": {
+				"1": {
+					"name": "constant.numeric.ignition",
+					"comment": "Source position script offset"
+				},
+				"2": {
+					"name": "keyword.control.ignition",
+					"comment": "Statement or expression"
+				},
+				"3": {
+					"name": "constant.numeric.ignition",
+					"comment": "Address"
+				},
+				"4": {
+					"name": "constant.numeric.ignition",
+					"comment": "Bytecode offset"
+				},
+				"5": {
+					"name": "constant.numeric.ignition",
+					"comment": "Hexdump"
+				},
+				"6": {
+					"name": "entity.name.type.ignition",
+					"comment": "Opcode name",
+					"patterns": [
+						{
+							"name": "constant.numeric.ignition",
+							"match": "\\d+"
+						}
+					]
+				},
+				"7": {
+					"patterns": [
+						{
+							"match": "\\b([ar]\\d+)\\b",
+							"comment": "Register or slot",
+							"captures": {
+								"1": {
+									"name": "constant.language.ignition"
+								}
+							}
+						},
+						{
+							"include": "#number"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "meta.property.ignition",
+			"match": "^ - ([\\w ()]+)",
+			"captures": {
+				"1": {
+					"name": "entity.name.section.ignition"
+				}
+			}
+		},
+		{
+			"name": "meta.tag.string.ignition",
+			"comment": "String literals",
+			"match": "<(String)\\[(\\d+)\\]: #(.*)>",
+			"captures": {
+				"1": {
+					"name": "entity.name.type.ignition"
+				},
+				"2": {
+					"name": "constant.numeric.ignition"
+				},
+				"3": {
+					"name": "string.unquoted.ignition"
+				}
+			}
+		},
+		{
+			"name": "meta.tag.object.ignition",
+			"match": "<([A-Z][A-Za-z]+)(\\[(\\d+)\\])?(\\([A-Z_]+\\))?.*>$",
+			"captures": {
+				"1": {
+					"name": "entity.name.type.ignition"
+				},
+				"2": {
+					"name": "punctuation.definition.array.ignition"
+				},
+				"3": {
+					"name": "constant.numeric.ignition"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#number"
+				}
+			]
+		},
+		{
+			"include": "#number"
+		}
+	],
+	"repository": {
+		"number": {
+			"name": "constant.numeric.ignition",
+			"match": "-?\\b(?:(?:0|[1-9]\\d*)(?:\\.\\d+)?|0x[0-9a-fA-F]+)\\b"
+		}
+	},
+	"scopeName": "source.ignition"
+}
