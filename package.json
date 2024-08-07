@@ -9,17 +9,36 @@
   "categories": [
     "Programming Languages"
   ],
+  "icon": "./images/icon.png",
+  "publisher": "j4k0xb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j4k0xb/v8-bytecode-highlight.git"
+  },
   "contributes": {
-    "languages": [{
-      "id": "ignition",
-      "aliases": ["Ignition Bytecode", "ignition"],
-      "extensions": [".ign"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "ignition",
-      "scopeName": "source.ignition",
-      "path": "./syntaxes/ignition.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "ignition",
+        "aliases": [
+          "V8 Ignition Bytecode",
+          "ignition"
+        ],
+        "extensions": [
+          ".ign"
+        ],
+        "icon": {
+          "light": "./images/v8-ignition-light.svg",
+          "dark": "./images/v8-ignition-dark.svg"
+        },
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ignition",
+        "scopeName": "source.ignition",
+        "path": "./syntaxes/ignition.tmLanguage.json"
+      }
+    ]
   }
 }
