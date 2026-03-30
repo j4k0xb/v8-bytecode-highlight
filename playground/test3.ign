@@ -1,0 +1,80 @@
+
+Start SharedFunctionInfo
+Parameter count 1
+Register count 1
+Frame size 8
+OSR nesting level: 0
+Bytecode Age: 0
+    0 S> 000001F5D511D9AE @    0 : 7f 00 00 00       CreateClosure [0], [0], #0
+         000001F5D511D9B2 @    4 : c3                Star0 
+   85 S> 000001F5D511D9B3 @    5 : a8                Return 
+Constant pool (size = 1)
+000001F5D511D9B9: [FixedArray] in OldSpace
+ - map: 0x030d007812c1 <Map>
+ - length: 1
+           0: 0x01f5d511d9d1 <SharedFunctionInfo>
+Start SharedFunctionInfo
+000001F5D511D9D1: [SharedFunctionInfo] in OldSpace
+ - map: 0x030d00781971 <Map[56]>
+ - name: 0x030d007817b1 <String[0]: #>
+ - inferred name: 0x030d007817b1 <String[0]: #>
+ - kind: NormalFunction
+ - syntax kind: AnonymousExpression
+ - function_map_index: 183
+ - formal_parameter_count: 5
+ - expected_nof_properties: 
+ - language_mode: sloppy
+ - data: 0x01f5d511da09 <BytecodeArray[7]>
+ - code (from data): 0x7fc4d6b03e81 <Code BUILTIN InterpreterEntryTrampoline>
+ - script: 0x01f5d511db19 <Script>
+ - function token position: 1
+ - start position: 10
+ - end position: 83
+ - no debug info
+ - scope info: 0x01f5d511dab9 <ScopeInfo FUNCTION_SCOPE>
+ - length: 5
+ - feedback_metadata: 000001F5D511DB01: [FeedbackMetadata] in OldSpace
+ - map: 0x030d00781f61 <Map>
+ - slot_count: 1
+ - create_closure_slot_count: 0
+ Slot #0 Literal
+
+
+Start BytecodeArray
+Parameter count 6
+Register count 1
+Frame size 8
+OSR nesting level: 0
+Bytecode Age: 0
+   70 S> 000001F5D511DA3E @    0 : 78 00 00 25       CreateArrayLiteral [0], [0], #37
+         000001F5D511DA42 @    4 : c3                Star0 
+         000001F5D511DA43 @    5 : 0e                LdaUndefined 
+   82 S> 000001F5D511DA44 @    6 : a8                Return 
+Constant pool (size = 1)
+000001F5D511DA49: [FixedArray] in OldSpace
+ - map: 0x030d007812c1 <Map>
+ - length: 1
+           0: 0x01f5d511da61 <ArrayBoilerplateDescription PACKED_SMI_ELEMENTS, 0x01f5d511da79 <FixedArray[3]>
+Start FixedArray
+000001F5D511DA79: [FixedArray] in OldSpace
+ - map: 0x030d00781809 <Map>
+ - length: 3
+           0: 1
+           1: 2
+           2: 3
+
+End FixedArray
+>
+Handler Table (size = 0)
+Source Position Table (size = 7)
+0x01f5d511daa1 <ByteArray[7]>
+
+End BytecodeArray
+
+End SharedFunctionInfo
+
+Handler Table (size = 0)
+Source Position Table (size = 7)
+0x01f5d511dbe1 <ByteArray[7]>
+
+End SharedFunctionInfo

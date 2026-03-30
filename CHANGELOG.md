@@ -7,6 +7,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Highlight TwoByte/Cons/Thin/External string representations
+- Match more variations of hex numbers
 
 ## [0.2.0]
 
