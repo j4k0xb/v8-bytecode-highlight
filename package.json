@@ -2,14 +2,14 @@
   "name": "v8-bytecode-highlight",
   "displayName": "v8-bytecode-highlight",
   "description": "Syntax highlighting for v8 ignition bytecode disassembly.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.92.0"
   },
   "categories": [
     "Programming Languages"
   ],
-  "icon": "./images/icon.png",
+  "icon": "images/icon.png",
   "publisher": "j4k0xb",
   "repository": {
     "type": "git",
